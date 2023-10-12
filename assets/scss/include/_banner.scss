@@ -1,0 +1,153 @@
+.banner {
+  background: var(--bg-purple);
+
+  &__content {
+    position: relative;
+    min-height: 90vh;
+    @include container(955px);
+    padding: 0 20px;
+  }
+
+  &__text {
+    padding-top: 80px;
+    @include flex(center, null, row, 70px);
+  }
+
+  &__main {
+    max-width: 575px;
+    @include flex(null, null, column, 45px)
+  }
+
+  &__heading {
+    @include flex(null, null, column, 20px)
+  }
+
+  &__subtitle {
+    font-family: "Montserrat", sans-serif;
+    @include font(14px, 700, normal, var(--text-light));
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    @include font(90px, 700, 106px, var(--text-light));
+    z-index: 1;
+  }
+
+  &__button {
+    font-family: "Montserrat", sans-serif;
+    width: max-content;
+    @include button(16px 32px, null, 1px solid var(--bg-yellow), 49px, var(--bg-yellow), 12px, 700, var(--text-dark));
+    text-transform: uppercase;
+    z-index: 1;
+    transition: .6s all;
+
+    &:hover {
+      @include button(null, null, null, null, transparent, null, null, var(--text-light));
+    }
+  }
+
+  &__question {
+    max-width: 214px;
+    font-family: "Arvo", sans-serif;
+    @include font(18px, 400, 26px, var(--text-light));
+    z-index: 1;
+  }
+
+  &__image {
+    width: 100%;
+    @include position(absolute, null, 0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .banner {
+
+    &__text {
+      padding-top: 60px;
+      @include flex(null, null, null, 50px);
+    }
+
+    &__main {
+      @include flex(null, null, null, 35px)
+    }
+
+    &__heading {
+      @include flex(null, null, null, 15px)
+    }
+
+    &__subtitle {
+      @include font(12px, null, null, null);
+    }
+
+    &__title {
+      @include font(65px, null, 86px, null);
+    }
+
+    &__question {
+      @include font(16px, null, 24px, null);
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .banner {
+
+    &__text {
+      padding-top: 50px;
+      @include flex(null, null, null, 40px);
+    }
+
+    &__main {
+      @include flex(null, null, null, 35px)
+    }
+
+    &__subtitle {
+      @include font(12px, null, null, null);
+    }
+
+    &__title {
+      @include font(35px, null, 46px, null);
+    }
+
+    &__question {
+      @include font(14px, null, 20px, null);
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .banner {
+
+    &__text {
+      padding-top: 60px;
+      @include flex(null, center, column, 50px);
+    }
+
+    &__main {
+      @include flex(center, center, null, 25px)
+    }
+
+    &__heading {
+      @include flex(center, center, null, 10px)
+    }
+
+    &__subtitle {
+      @include font(10px, null, null, null);
+    }
+
+    &__title {
+      @include font(25px, null, 36px, null);
+      text-align: center
+    }
+
+    &__question {
+      @include font(14px, null, 18px, null);
+      text-align: center
+    }
+
+    &__button {
+      @include button(14px 28px, null, null, null, null, 10px);
+    }
+  }
+}

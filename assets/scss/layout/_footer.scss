@@ -1,0 +1,141 @@
+.footer {
+  margin-top: 100px;
+  background: var(--bg-dark);
+
+  &__content {
+    padding: 0 20px;
+    @include flex(null, null, column, 15px);
+  }
+
+  &__nav {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--text-gray);
+    @include flex(null, space-between, null, 20px);
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include flex(null, null, column, 15px);
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    @include font(12px, 700, normal, var(--text-light));
+    letter-spacing: 2.4px;
+    text-transform: uppercase
+  }
+
+  &__links {
+    @include flex(null, null, column, 10px);
+
+    a {
+      font-family: "Open Sans", sans-serif;
+      @include link(14px, 400, var(--text-gray));
+      transition: .6s all;
+
+      &:hover {
+        @include link(null, null, var(--text-light));
+      }
+    }
+  }
+
+  &__social{
+    @include flex(center, null, null, 60px);
+    flex-wrap: wrap;
+  }
+
+  &__icons:nth-child(1) {
+    width: max-content;
+
+    svg {
+      width: 10px;
+      height: 19px;
+      fill: var(--white);
+      transition: .4s all;
+
+      &:hover {
+        fill: var(--black);
+      }
+    }
+  }
+
+  &__icons:nth-child(2) {
+    width: max-content;
+
+    svg {
+      width: 22px;
+      height: 17px;
+      fill: var(--white);
+      transition: .4s all;
+
+      &:hover {
+        fill: var(--black);
+      }
+    }
+  }
+
+  &__icons:nth-child(3) {
+    width: max-content;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--white);
+      transition: .4s all;
+
+      &:hover {
+        fill: var(--black);
+      }
+    }
+  }
+
+  &__icons:nth-child(4) {
+    width: max-content;
+
+    svg {
+      width: 14px;
+      height: 19px;
+      fill: var(--white);
+      transition: .4s all;
+
+      &:hover {
+        fill: var(--black);
+      }
+    }
+  }
+}
+
+.copyright {
+  @include flex(center, center, column, 60px);
+
+  &__content {
+    width: 100%;
+    @include flex(center, space-between, null, 30px);
+    flex-wrap: wrap;
+  }
+
+  &__links {
+    @include flex(center, null, null, 40px);
+    flex-wrap: wrap;
+
+    a {
+      font-family: "Montserrat", sans-serif;
+      @include link(12px, 700, var(--text-light));
+      letter-spacing: 2.4px;
+      text-transform: uppercase
+    }
+  }
+
+  &__text {
+    font-family: "Open Sans", sans-serif;
+    @include font(12px, 400, 22px, var(--text-dark-gray));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .footer{
+    &__nav{
+    @include flex(null, null, column, 20px);
+    }
+  }
+}

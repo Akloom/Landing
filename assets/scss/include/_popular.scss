@@ -1,0 +1,243 @@
+.popular {
+  margin-top: 70px;
+  padding: 0 20px;
+  @include flex(center, center, column, 70px);
+
+  &__title {
+    font-family: "Arvo", sans-serif;
+    @include font(36px, 700, 48px, var(--bg-dark));
+  }
+}
+
+.cards {
+  @include flex(center, center, row, 20px);
+  flex-wrap: wrap;
+
+  &__item {
+    max-width: 360px;
+    border-radius: 8px;
+    @include flex(null, null, column, 20px);
+    background: var(--bg-light);
+    transition: .6s all;
+  }
+
+  &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &__content {
+    padding: 0 25px 25px 25px;
+    @include flex(null, null, column, 15px);
+  }
+
+  &__info {
+    @include flex(null, null, column, 5px);
+  }
+
+  &__title {
+    font-family: "Arvo", sans-serif;
+    @include font(22px, 400, 32px, var(--text-dark));
+    transition: .6s all;
+  }
+
+  &__desc {
+    max-width: 270px;
+    font-family: "Open Sans", sans-serif;
+    @include font(14px, 400, 26px, var(--text-gray));
+    transition: .6s all;
+  }
+
+  &__statistic {
+    @include flex(center, space-between, null, 10px);
+  }
+
+  &__period {
+    @include flex(center, null, null, 10px);
+  }
+
+  &__viewers {
+    @include flex(center, null, null, 10px);
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    @include font(10px, 700, normal, var(--text-gray));
+    transition: .6s all;
+  }
+
+  &__view{
+    width: 24px;
+    height: 24px;
+    fill: var(--text-gray);
+    transition: .6s all;
+  }
+
+  &__clock{
+    width: 24px;
+    height: 24px;
+    stroke: var(--text-gray);
+    transition: .6s all;
+  }
+
+  &__item:nth-child(5) {
+    max-width: 740px;
+  }
+
+  &__item:nth-child(5) .cards__desc {
+    max-width: 680px;
+  }
+}
+
+.cards__item:nth-child(2n):hover {
+  background: var(--bg-yellow);
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n):hover .cards__title {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n):hover .cards__desc {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n):hover .cards__text {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n):hover .cards__view {
+  fill: var(--white);
+}
+
+.cards__item:nth-child(2n):hover .cards__clock {
+  stroke: var(--white);
+}
+
+.cards__item:nth-child(2n+1):hover {
+  background: var(--bg-dark);
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n+1):hover .cards__title {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n+1):hover .cards__desc {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n+1):hover .cards__text {
+  @include font(null, null, null, var(--text-light));
+}
+
+.cards__item:nth-child(2n+1):hover .cards__view {
+  fill: var(--white);
+}
+
+.cards__item:nth-child(2n+1):hover .cards__clock {
+  stroke: var(--white);
+}
+
+@media screen and (max-width: 920px) {
+  .popular {
+    margin-top: 50px;
+    @include flex(null, null, null, 50px);
+
+    &__title {
+      @include font(30px, null, null, null);
+    }
+  }
+
+  .cards {
+    @include flex(null, null, null, 15px);
+
+    &__item {
+      @include flex(null, null, null, 15px);
+    }
+
+    &__content {
+      @include flex(null, null, null, 10px);
+    }
+
+    &__title {
+      @include font(18px, null, 28px, null);
+    }
+
+    &__desc {
+      @include font(12px, null, 22px, null);
+    }
+
+    &__statistic {
+      @include flex(null, null, null, 5px);
+    }
+
+    &__period {
+      @include flex(null, null, null, 10px);
+    }
+
+    &__viewers {
+      @include flex(null, null, null, 10px);
+    }
+
+    &__text {
+      @include font(10px, null, null, null);
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .cards {
+    &__item:nth-child(5) {
+      max-width: 360px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .popular {
+    margin-top: 40px;
+    @include flex(null, null, null, 40px);
+
+    &__title {
+      @include font(26px, null, null, null);
+    }
+  }
+
+  .cards {
+
+    &__title {
+      @include font(16px, null, 24px, null);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .popular {
+    margin-top: 20px;
+    @include flex(null, null, null, 20px);
+
+    &__title {
+      @include font(20px, null, null, null);
+    }
+  }
+
+  .cards {
+
+    &__content {
+      padding: 0 20px 20px 20px;
+    }
+
+    &__title {
+      @include font(14px, null, 20px, null);
+    }
+
+    &__desc {
+      @include font(10px, null, 18px, null);
+    }
+  }
+}
